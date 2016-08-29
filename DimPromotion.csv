@@ -1,0 +1,17 @@
+PromotionKey,PromotionAlternateKey,PromotionName,DiscountPct,PromotionType,PromotionCategory,StartDate,EndDate,MinQty,MaxQty
+6,6,Volume Discount over 60,0.20000000000000001,Volume Discount,Reseller,2005-07-01,2008-06-30,61,
+9,9,Road-650 Overstock,0.29999999999999999,Excess Inventory,Reseller,2006-07-01,2006-08-31,0,
+2,2,Volume Discount 11 to 14,0.02,Volume Discount,Reseller,2005-07-01,2008-06-30,11,14
+8,8,Sport Helmet Discount-2002,0.10000000000000001,Seasonal Discount,Reseller,2006-07-01,2006-07-31,0,
+10,10,Mountain Tire Sale,0.5,Excess Inventory,Customer,2007-06-15,2007-08-30,0,
+5,5,Volume Discount 41 to 60,0.14999999999999999,Volume Discount,Reseller,2005-07-01,2008-06-30,41,60
+7,7,Mountain-100 Clearance Sale,0.34999999999999998,Discontinued Product,Reseller,2006-05-15,2006-06-30,0,
+15,15,Half-Price Pedal Sale,0.5,Seasonal Discount,Customer,2007-08-15,2007-09-15,0,
+3,3,Volume Discount 15 to 24,5.0000000000000003E-2,Volume Discount,Reseller,2005-07-01,2008-06-30,15,24
+13,13,Touring-3000 Promotion,0.14999999999999999,New Product,Reseller,2007-07-01,2007-09-30,0,
+11,11,Sport Helmet Discount-2003,0.14999999999999999,Seasonal Discount,Reseller,2007-07-01,2007-07-31,0,
+1,1,No Discount,0.0,No Discount,No Discount,2005-06-01,2008-12-31,0,
+16,16,Mountain-500 Silver Clearance Sale,0.40000000000000002,Discontinued Product,Reseller,2008-05-01,2008-06-30,0,
+4,4,Volume Discount 25 to 40,0.10000000000000001,Volume Discount,Reseller,2005-07-01,2008-06-30,25,40
+12,12,LL Road Frame Sale,0.34999999999999998,Excess Inventory,Reseller,2007-07-01,2007-08-15,0,
+14,14,Touring-1000 Promotion,0.20000000000000001,New Product,Reseller,2007-07-01,2007-09-30,0,
