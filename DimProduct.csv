@@ -1,3 +1,4 @@
+ProductKey,ProductAlternateKey,WeightUnitMeasureCode,SizeUnitMeasureCode,ProductName,StandardCost,FinishedGoodsFlag,Color,SafetyStockLevel,ReorderPoint,ListPrice,Size,SizeRange,Weight,DaysToManufacture,ProductLine,DealerPrice,Class,Style,ModelName,Description,StartDate,EndDate
 1,AR-5381,,,"Adjustable Race",,0,NA,1000,750,,,NA,,0,,,,,"","",2002-06-01 00:00:00.000,,Current
 2,BA-8327,,,"Bearing Ball",,0,NA,1000,750,,,NA,,0,,,,,"","",2002-06-01 00:00:00.000,,Current
 3,BE-2349,,,"BB Ball Bearing",,0,NA,800,600,,,NA,,1,,,,,"","",2002-06-01 00:00:00.000,,Current
