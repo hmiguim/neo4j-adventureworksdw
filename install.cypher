@@ -1,15 +1,15 @@
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimCurrency.csv" as row
 CREATE (:DimCurrency {
-	CurrencyKey: row.CurrencyKey,
-	CurrencyAlternateKey: row.CurrencyAlternateKey,
+	CurrencyKey: toInteger(row.CurrencyKey),
+	CurrencyAlternateKey: toInteger(row.CurrencyAlternateKey),
 	CurrencyName: row.CurrencyName
 });
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimCustomer.csv" as row
 CREATE (:DimCustomer {
-	CustomerKey: row.CustomerKey,
-	GeographyKey: row.GeographyKey,
-	CustomerAlternateKey: row.CustomerAlternateKey,
+	CustomerKey: toInteger(row.CustomerKey),
+	GeographyKey: toInteger(row.GeographyKey),
+	CustomerAlternateKey: toInteger(row.CustomerAlternateKey),
 	Title: row.Title,
 	FirstName: row.FirstName,
 	MiddleName: row.MiddleName,
@@ -20,9 +20,9 @@ CREATE (:DimCustomer {
 	Suffix: row.Suffix,
 	Gender: row.Gender,
 	EmailAddress: row.EmailAddress,
-	YearlyIncome: row.YearlyIncome,
-	TotalChildren: row.TotalChildren,
-	NumberChildrenAtHome: row.NumberChildrenAtHome,
+	YearlyIncome: toFloat(row.YearlyIncome),
+	TotalChildren: toInteger(row.TotalChildren),
+	NumberChildrenAtHome: toInteger(row.NumberChildrenAtHome),
 	EnglishEducation: row.EnglishEducation,
 	SpanishEducation: row.SpanishEducation,
 	FrenchEducation: row.FrenchEducation,
@@ -30,7 +30,7 @@ CREATE (:DimCustomer {
 	SpanishOccupation: row.SpanishOccupation,
 	FrenchOccupation: row.FrenchOccupation,
 	HouseOwnerFlag: row.HouseOwnerFlag,
-	NumberCarsOwned: row.NumberCarsOwned,
+	NumberCarsOwned: toInteger(row.NumberCarsOwned),
 	AddressLine1: row.AddressLine1,
 	AddressLine2: row.AddressLine2,
 	Phone: row.Phone,
@@ -41,30 +41,30 @@ CREATE (:DimCustomer {
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimDate.csv" as row
 CREATE (:DimDate {
-	DateKey: row.DateKey, 
+	DateKey: toInteger(row.DateKey), 
 	FullDateAlternateKey: row.FullDateAlternateKey, 
-	DayNumberOfWeek: row.DayNumberOfWeek, 
+	DayNumberOfWeek: toInteger(row.DayNumberOfWeek), 
 	EnglishDayNameOfWeek: row.EnglishDayNameOfWeek, 
 	SpanishDayNameOfWeek: row.SpanishDayNameOfWeek, 
 	FrenchDayNameOfWeek: row.FrenchDayNameOfWeek, 
-	DayNumberOfMonth: row.DayNumberOfMonth, 
-	DayNumberOfYear: row.DayNumberOfYear, 
-	WeekNumberOfYear: row.WeekNumberOfYear, 
+	DayNumberOfMonth: toInteger(row.DayNumberOfMonth), 
+	DayNumberOfYear: toInteger(row.DayNumberOfYear), 
+	WeekNumberOfYear: toInteger(row.WeekNumberOfYear), 
 	EnglishMonthName: row.EnglishMonthName, 
 	SpanishMonthName: row.SpanishMonthName, 
 	FrenchMonthName: row.FrenchMonthName, 
-	MonthNumberOfYear: row.MonthNumberOfYear, 
-	CalendarQuarter: row.CalendarQuarter, 
-	CalendarYear: row.CalendarYear, 
-	CalendarSemester: row.CalendarSemester, 
-	FiscalQuarter: row.FiscalQuarter, 
-	FiscalYear: row.FiscalYear, 
-	FiscalSemester: row.FiscalSemester
+	MonthNumberOfYear: toInteger(row.MonthNumberOfYear), 
+	CalendarQuarter: toInteger(row.CalendarQuarter), 
+	CalendarYear: toInteger(row.CalendarYear), 
+	CalendarSemester: toInteger(row.CalendarSemester), 
+	FiscalQuarter: toInteger(row.FiscalQuarter), 
+	FiscalYear: toInteger(row.FiscalYear), 
+	FiscalSemester: toInteger(row.FiscalSemester)
 });
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimGeography.csv" as row
 CREATE (:DimGeography {
-	GeographyKey: row.GeographyKey,
+	GeographyKey: toInteger(row.GeographyKey),
 	City: row.City,
 	StateProvinceCode: row.StateProvinceCode,
 	StateProvinceName: row.StateProvinceName,
@@ -73,32 +73,32 @@ CREATE (:DimGeography {
 	SpanishCountryRegionName: row.SpanishCountryRegionName,
 	FrenchCountryRegionName: row.FrenchCountryRegionName,
 	PostalCode: row.PostalCode,
-	SalesTerritoryKey: row.SalesTerritoryKey,
+	SalesTerritoryKey: toInteger(row.SalesTerritoryKey),
 	IpAddressLocator: row.IpAddressLocator
 });
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimProduct.csv" as row
 CREATE (:DimProduct {
-	ProductKey: row.ProductKey,
+	ProductKey: toInteger(row.ProductKey),
 	ProductAlternateKey: row.ProductAlternateKey,
-	ProductSubcategoryKey: row.ProductSubcategoryKey,
+	ProductSubcategoryKey: toInteger(row.ProductSubcategoryKey),
 	WeightUnitMeasureCode: row.WeightUnitMeasureCode,
 	SizeUnitMeasureCode: row.SizeUnitMeasureCode,
 	EnglishProductName: row.EnglishProductName,
 	SpanishProductName: row.SpanishProductName,
 	FrenchProductName: row.FrenchProductName,
-	StandardCost: row.StandardCost,
+	StandardCost: toFloat(row.StandardCost),
 	FinishedGoodsFlag: row.FinishedGoodsFlag,
 	Color: row.Color,
-	SafetyStockLevel: row.SafetyStockLevel,
-	ReorderPoint: row.ReorderPoint,
-	ListPrice: row.ListPrice,
+	SafetyStockLevel: toInteger(row.SafetyStockLevel),
+	ReorderPoint: toInteger(row.ReorderPoint),
+	ListPrice: toFloat(row.ListPrice),
 	Size: row.Size,
 	SizeRange: row.SizeRange,
-	Weight: row.Weight,
-	DaysToManufacture: row.DaysToManufacture,
+	Weight: toFloat(row.Weight),
+	DaysToManufacture: toInteger(row.DaysToManufacture),
 	ProductLine: row.ProductLine,
-	DealerPrice: row.DealerPrice,
+	DealerPrice: toFloat(row.DealerPrice),
 	Class: row.Class,
 	Style: row.Style,
 	ModelName: row.ModelName,
@@ -110,31 +110,31 @@ CREATE (:DimProduct {
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimProductCategory.csv" as row
 CREATE (:DimProductCategory {
-	ProductCategoryKey: row.ProductCategoryKey,
-	ProductCategoryAlternateKey: row.ProductCategoryAlternateKey,
+	ProductCategoryKey: toInteger(row.ProductCategoryKey),
+	ProductCategoryAlternateKey: toInteger(row.ProductCategoryAlternateKey),
 	EnglishProductCategoryName: row.EnglishProductCategoryName,
 	SpanishProductCategoryName: row.SpanishProductCategoryName,
-	FrenchProductCategoryNam: row.FrenchProductCategoryName
+	FrenchProductCategoryName: row.FrenchProductCategoryName
 });
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimProductSubcategory.csv" as row
 CREATE (:DimProductSubcategory {
-	ProductSubcategoryKey: row. ProductSubcategoryKey,
-	ProductSubcategoryAlternateKey: row.ProductSubcategoryAlternateKey,
+	ProductSubcategoryKey: toInteger(row. ProductSubcategoryKey),
+	ProductSubcategoryAlternateKey: toInteger(row.ProductSubcategoryAlternateKey),
 	EnglishProductSubcategoryName: row.EnglishProductSubcategoryName,
 	SpanishProductSubcategoryName: row.SpanishProductSubcategoryName,
 	FrenchProductSubcategoryName: row.FrenchProductSubcategoryName,
-	ProductCategoryKey: row.ProductCategoryKey
+	ProductCategoryKey: toInteger(row.ProductCategoryKey)
 });
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimPromotion.csv" as row
 CREATE (:DimPromotion {
-	PromotionKey: row.PromotionKey,
-	PromotionAlternateKey: row.PromotionAlternateKey,
+	PromotionKey: toInteger(row.PromotionKey),
+	PromotionAlternateKey: toInteger(row.PromotionAlternateKey),
 	EnglishPromotionName: row.EnglishPromotionName,
 	SpanishPromotionName: row.SpanishPromotionName,
 	FrenchPromotionName: row.FrenchPromotionName,
-	DiscountPct: row.DiscountPct,
+	DiscountPct: toFloat(row.DiscountPct),
 	EnglishPromotionType: row.EnglishPromotionType,
 	SpanishPromotionType: row.SpanishPromotionType,
 	FrenchPromotionType: row.FrenchPromotionType,
@@ -143,14 +143,14 @@ CREATE (:DimPromotion {
 	FrenchPromotionCategory: row.FrenchPromotionCategory,
 	StartDate: row.StartDate,
 	EndDate: row.EndDate,
-	MinQty: row.MinQty,
-	MaxQty: row.MaxQty
+	MinQty: toInteger(row.MinQty),
+	MaxQty: toInteger(row.MaxQty)
 });
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/DimSalesTerritory.csv" as row
 CREATE (:DimSalesTerritory {
-	SalesTerritoryKey: row.SalesTerritoryKey,
-	SalesTerritoryAlternateKey: row.SalesTerritoryAlternateKey,
+	SalesTerritoryKey: toInteger(row.SalesTerritoryKey),
+	SalesTerritoryAlternateKey: toInteger(row.SalesTerritoryAlternateKey),
 	SalesTerritoryRegion: row.SalesTerritoryRegion,
 	SalesTerritoryCountry: row.SalesTerritoryCountry,
 	SalesTerritoryGroup: row.SalesTerritoryGroup
@@ -158,27 +158,27 @@ CREATE (:DimSalesTerritory {
 
 LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/hmiguim/AdventureWorksCycle/master/FactInternetSales.csv" as row
 CREATE (:FactInternetSales {
-	ProductKey: row.ProductKey,
-	OrderDateKey: row.OrderDateKey,
-	DueDateKey: row.DueDateKey,
-	ShipDateKey: row.ShipDateKey,
-	CustomerKey: row.CustomerKey,
-	PromotionKey: row.PromotionKey,
-	CurrencyKey: row.CurrencyKey,
-	SalesTerritoryKey: row.SalesTerritoryKey,
+	ProductKey: toInteger(row.ProductKey),
+	OrderDateKey: toInteger(row.OrderDateKey),
+	DueDateKey: toInteger(row.DueDateKey),
+	ShipDateKey: toInteger(row.ShipDateKey),
+	CustomerKey: toInteger(row.CustomerKey),
+	PromotionKey: toInteger(row.PromotionKey),
+	CurrencyKey: toInteger(row.CurrencyKey),
+	SalesTerritoryKey: toInteger(row.SalesTerritoryKey),
 	SalesOrderNumber: row.SalesOrderNumber,
-	SalesOrderLineNumber: row.SalesOrderLineNumber,
-	RevisionNumber: row.RevisionNumber,
-	OrderQuantity: row.OrderQuantity,
-	UnitPrice: row.UnitPrice,
-	ExtendedAmount: row.ExtendedAmount,
-	UnitPriceDiscountPct: row.UnitPriceDiscountPct,
-	DiscountAmount: row.DiscountAmount,
-	ProductStandardCost: row.ProductStandardCost,
-	TotalProductCost: row.TotalProductCost,
-	SalesAmount: row.SalesAmount,
-	TaxAmt: row.TaxAmt,
-	Freight: row.Freight,
+	SalesOrderLineNumber: toInteger(row.SalesOrderLineNumber),
+	RevisionNumber: toInteger(row.RevisionNumber),
+	OrderQuantity: toInteger(row.OrderQuantity),
+	UnitPrice: toFloat(row.UnitPrice),
+	ExtendedAmount: toFloat(row.ExtendedAmount),
+	UnitPriceDiscountPct: toFloat(row.UnitPriceDiscountPct),
+	DiscountAmount: toFloat(row.DiscountAmount),
+	ProductStandardCost: toFloat(row.ProductStandardCost),
+	TotalProductCost: toFloat(row.TotalProductCost),
+	SalesAmount: toFloat(row.SalesAmount),
+	TaxAmt: toFloat(row.TaxAmt),
+	Freight: toFloat(row.Freight),
 	CarrierTrackingNumber: row.CarrierTrackingNumber,
 	CustomerPONumber: row.CustomerPONumber,
 	OrderDate: row.OrderDate,
@@ -215,10 +215,10 @@ WHERE prodsub.ProductCategoryKey = cat.ProductCategoryKey
 CREATE (prodsub)-[:CATEGORY]->(cat);
 
 MATCH (f:FactInternetSales),(d:DimDate)
-WHERE f.orderDateKey = d.DateKey
+WHERE f.OrderDateKey = d.DateKey
 CREATE (f)-[:ORDER_AT]->(d);
 
-MATCH (f:FactInternetSales),(d:dimDate)
+MATCH (f:FactInternetSales),(d:DimDate)
 WHERE f.DueDateKey = d.DateKey
 CREATE (f)-[:DUE_AT]->(d);
 
