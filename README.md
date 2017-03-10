@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 
-* An adaptation of the AdventureWorksDW to graph database. Currently includes the data mart FactInternetSales.
+* An adaptation of the [AdventureWorksDW](https://www.microsoft.com/en-us/download/details.aspx?id=49502) to graph database. Currently includes the data mart FactInternetSales.
 
 ## How do I get set up? ##
 
