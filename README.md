@@ -7,7 +7,7 @@
 ## How do I get set up? ##
 
 * cypher-shell < install.cypher
-sfsdfds
+
 ## Who do I talk to? ##
 
-* [Miguel Guimarães](mailto:hmtlguimaraes@gmail.com?subject="Neo4j AdventureWorksDW adaptation")
+* [Miguel Guimarães](mailto:hmtlguimaraes@gmail.com?subject=Neo4j%20AdventureWorksDW%20adaptation)
